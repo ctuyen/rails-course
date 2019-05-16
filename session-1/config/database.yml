@@ -1,9 +1,9 @@
 default: &default
   adapter: postgresql
   host: localhost
-  port: 5432yml
-  username: postgres
-  password: 1111
+  port: 5432
+  username: <%= ENV['POSTGRES_USERNAME'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 development:
   <<: *default
